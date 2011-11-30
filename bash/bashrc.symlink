@@ -84,10 +84,6 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-#export PATH=$PATH:~/scripts:/var/lib/gems/1.8/bin/
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-rvm 1.9.2
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 

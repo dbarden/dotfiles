@@ -29,3 +29,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+#
+if [ -e $HOME/.localrc ]; then
+		source $HOME/.localrc
+fi
