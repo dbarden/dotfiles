@@ -1,5 +1,8 @@
 #compdef manage.py
 
+alias drs='python manage.py runserver'
+alias dsh='python manage.py shell'
+
 typeset -ga nul_args
 nul_args=(
   '--settings=-[the Python path to a settings module.]:file:_files'
