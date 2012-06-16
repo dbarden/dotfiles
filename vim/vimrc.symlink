@@ -1,5 +1,3 @@
-
-:colorscheme desert
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
 	set fileencodings=ucs-bom,utf-8,latin1
 endif
@@ -39,6 +37,12 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/TaskList.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
 
@@ -60,6 +64,7 @@ nnoremap <silent> <F3> :bn <CR>
 nnoremap <silent> ] <C-]> <CR>
 nnoremap <silent> [ <C-t> <CR>
 
+" MiniBuf Explorer options
 let g:miniBufExplForceSyntaxEnable = 0
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
@@ -116,6 +121,8 @@ if &term=="xterm"
 	set t_Sf=^[3%dm
 endif
 
+" NerdTree
+noremap <silent> <F10> :NERDTreeToggle<CR>
 " --------------------
 " TaskList
 " --------------------
@@ -185,3 +192,8 @@ let g:miniBufExplMaxSize = 1		" <max lines: defualt 0> setting this to 0 will me
 "highlight MBEVisibleNormal term=bold cterm=bold gui=bold guibg=Gray guifg=Black
 " buffers that have CHANGED and are VISIBLE
 "highlight MBEVisibleChanged term=bold cterm=bold gui=bold guibg=DarkRed guifg=Black
+
+" use solarized by default
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
