@@ -20,8 +20,9 @@ set bg=dark
 "set mouse = a
 set noerrorbells
 set tabstop=4
-set shiftwidth=4
 set softtabstop=4
+set shiftwidth=4
+set noexpandtab
 set textwidth=80
 set smartcase           " Do smart case matching
 set incsearch           " Incremental search
