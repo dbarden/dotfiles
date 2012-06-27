@@ -33,7 +33,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
@@ -43,6 +42,7 @@ Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on
 
