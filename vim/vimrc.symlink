@@ -115,12 +115,9 @@ if &t_Co > 2 || has("gui_running")
 	set hlsearch
 endif
 
-
-if &term=="xterm"
-	set t_Co=256
-	set t_Sb=^[4%dm
-	set t_Sf=^[3%dm
-endif
+set t_Co=256
+set t_Sb=^[4%dm
+set t_Sf=^[3%dm
 
 " NerdTree
 noremap <silent> <F10> :NERDTreeToggle<CR>
