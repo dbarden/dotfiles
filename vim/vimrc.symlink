@@ -44,6 +44,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'fs111/pydoc.vim'
 
 filetype plugin indent on
 
