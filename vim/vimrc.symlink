@@ -48,18 +48,15 @@ Bundle 'fs111/pydoc.vim'
 
 filetype plugin indent on
 
-"The following alternative may be less obtrusive.
-"highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-" Try the following if your GUI uses a dark background.
-highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+" Extra white space highlight
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 match ExtraWhitespace /\s\+$/
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 match ExtraWhitespace /[^\t]\zs\t\+/
 match ExtraWhitespace /^\t*\zs \+/
-
-autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
+match ExtraWhitespace /^\s* \s*\|\s\+$/
 
 nnoremap <silent> <F2> :bp <CR>
 nnoremap <silent> <F3> :bn <CR>
