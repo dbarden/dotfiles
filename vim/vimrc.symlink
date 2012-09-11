@@ -45,12 +45,13 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'fs111/pydoc.vim'
+Bundle 'nvie/vim-flake8'
 
 filetype plugin indent on
 
 " Extra white space highlight
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 match ExtraWhitespace /\s\+$/
 match ExtraWhitespace /\s\+$\| \+\ze\t/
@@ -189,6 +190,9 @@ let g:miniBufExplMaxSize = 1		" <max lines: defualt 0> setting this to 0 will me
 " buffers that have CHANGED and are VISIBLE
 "highlight MBEVisibleChanged term=bold cterm=bold gui=bold guibg=DarkRed guifg=Black
 
+" Flake8
+let g:flake8_ignore="E501"
+let g:syntastic_python_checker_args = "--ignore=E501"
 " use solarized by default
 set background=dark
 let g:solarized_termcolors=256
