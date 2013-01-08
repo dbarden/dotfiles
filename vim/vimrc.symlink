@@ -6,8 +6,6 @@ highlight Normal guibg=black
 highlight Normal guifg=white
 set gfn=DejaVu\ Sans\ Mono\ Bold\ 10
 
-call pathogen#infect()
-
 set nocompatible		" Use Vim defaults (much better!)
 set bs=indent,eol,start	" allow backspacing over everything in insert mode
 set ai					" always set autoindenting on
@@ -46,18 +44,19 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'fs111/pydoc.vim'
 Bundle 'nvie/vim-flake8'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
 " Extra white space highlight
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 match ExtraWhitespace /\s\+$/
 match ExtraWhitespace /\s\+$\| \+\ze\t/
-match ExtraWhitespace /[^\t]\zs\t\+/
-match ExtraWhitespace /^\t*\zs \+/
-match ExtraWhitespace /^\s* \s*\|\s\+$/
+"match ExtraWhitespace /[^\t]\zs\t\+/
+"match ExtraWhitespace /^\t*\zs \+/
+"match ExtraWhitespace /^\s* \s*\|\s\+$/
 
 nnoremap <silent> <F2> :bp <CR>
 nnoremap <silent> <F3> :bn <CR>
@@ -90,21 +89,6 @@ if has("autocmd")
 		autocmd FileType python set omnifunc=pythoncomplete#Complete
 		autocmd FileType c,cpp,h	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 	augroup END
-endif
-
-if has("cscope") && filereadable("/usr/bin/cscope")
-	set csprg=/usr/bin/cscope
-	set csto=0
-	set cst
-	set nocsverb
-	" add any database in current directory
-	if filereadable("cscope.out")
-	cs add cscope.out
-	" else add database pointed to by environment
-	elseif $CSCOPE_DB != ""
-		cs add $CSCOPE_DB
-	endif
-	set csverb
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -140,7 +124,7 @@ highlight MyTagListComment ctermfg=cyan guifg=DarkGreen
 " TagListFileName - Used for filenames
 highlight MyTagListFileName cterm=bold ctermfg=yellow gui=bold guifg=Black guibg=LightBlue
 
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'	" location of ctags tool
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'	" location of ctags tool
 let Tlist_Show_One_File = 0				" Displaying tags for only one file~
 let Tlist_Exist_OnlyWindow = 1			" if you are the last, kill yourself
 "let Tlist_Use_Left_Window = 1			" split to the right side of the screen
@@ -159,6 +143,7 @@ let g:ctags_args = 1
 let g:ctags_title = 1
 "let generate_tags=1
 let g:ctags_regenerate = 1
+set tags=./tags;/ 
 
 " let Tlist_Ctags_Cmd = 'ctags --c++-kinds=+p --fields=+iaS --extra=+q --languages=c++'
 " very slow, so I disable this
@@ -197,3 +182,6 @@ let g:syntastic_python_checker_args = "--ignore=E501"
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+set noswapfile
+
+au BufWrite *.coffee silent CoffeeMake
