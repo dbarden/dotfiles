@@ -9,7 +9,6 @@ msgwait 1
 hardstatus on
 hardstatus alwayslastline "%w"
 hardstatus string "%{.b }%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %c%a "
-defscrollback 1024
 caption string "%?%F%{.B.}%?%t%?"
 
 # terminfo and termcap for nice 256 color terminal
@@ -19,3 +18,6 @@ attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 # erase background with current bg color
 defbce on
+
+# Sets the number of scrollback lines to 5000
+defscrollback 5000
