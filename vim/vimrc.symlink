@@ -192,3 +192,6 @@ colorscheme solarized
 set noswapfile
 
 au BufWrite *.coffee silent CoffeeMake
+
+" Python Mode
+let g:pymode_lint_ignore = "E501"
