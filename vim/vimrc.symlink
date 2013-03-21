@@ -45,6 +45,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'fs111/pydoc.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'klen/python-mode'
 
 filetype plugin indent on
 
@@ -62,6 +63,12 @@ nnoremap <silent> <F2> :bp <CR>
 nnoremap <silent> <F3> :bn <CR>
 nnoremap <silent> ] <C-]> <CR>
 nnoremap <silent> [ <C-t> <CR>
+
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+nnoremap <leader>l :ls<CR>:b<space>
 
 " MiniBuf Explorer options
 let g:miniBufExplForceSyntaxEnable = 0
