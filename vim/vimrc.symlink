@@ -56,6 +56,7 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 match ExtraWhitespace /\s\+$/
 match ExtraWhitespace /\s\+$\| \+\ze\t/
+match ExtraWhitespace /\%121v.\+/
 "match ExtraWhitespace /[^\t]\zs\t\+/
 "match ExtraWhitespace /^\t*\zs \+/
 "match ExtraWhitespace /^\s* \s*\|\s\+$/
