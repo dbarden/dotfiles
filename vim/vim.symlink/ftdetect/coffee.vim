@@ -5,3 +5,6 @@
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *Cakefile set filetype=coffee
+set noexpandtab
+set tabstop=2
+set softtabstop=2
