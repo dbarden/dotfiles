@@ -113,6 +113,7 @@ set t_Sf=^[3%dm
 
 " NerdTree
 noremap <silent> <F10> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrows=0
 " --------------------
 " TaskList
 " --------------------
