@@ -1,8 +1,0 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-#rvm 1.9.2
-alias ls='ls -G'
-alias s='cd ..'
-
-if [ -e .bashrc ]; then
-	source .bashrc 
-fi
