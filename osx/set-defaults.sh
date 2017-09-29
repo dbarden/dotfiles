@@ -16,5 +16,8 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
+# Enabled hold press to show accents
+defaults write -g ApplePressAndHoldEnabled -bool true
+
 # Show the ~/Library folder
 chflags nohidden ~/Library
