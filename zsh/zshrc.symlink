@@ -13,13 +13,14 @@ antigen apply
 
 # Colored ls
 export CLICOLOR=YES
-LSCOLORS=gxfxcxdxbxegedabagacad
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -e ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 # Ruby
 [[ ! -e /usr/local/share/chruby/chruby.sh ]] || source /usr/local/share/chruby/chruby.sh
 chruby 2.6.3
 
+# Adds Rust to path
+export PATH="$HOME/.cargo/bin:$PATH"
