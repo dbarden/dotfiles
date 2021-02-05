@@ -1,3 +1,10 @@
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -22,5 +29,18 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 [[ ! -e /usr/local/share/chruby/chruby.sh ]] || source /usr/local/share/chruby/chruby.sh
 chruby 2.6.3
 
+# Python
+eval "$(pyenv init -)"
+
 # Adds Rust to path
 export PATH="$HOME/.cargo/bin:$PATH"
+
+alias be="bundle exec"
+alias bepi="bundle exec pod install"
+alias deploy="bundle exec fastlane deploy"
+
+# Node Version Management
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
